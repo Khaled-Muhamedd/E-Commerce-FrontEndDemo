@@ -1,14 +1,17 @@
 <div class="my-12">
-    <h2 [class.!text-red-700]="registerForm.invalid && registerForm.touched" class="text-4xl text-green-500 font-thin">Register Form</h2>
+    <h2 [class.!text-red-700]="registerForm.invalid && registerForm.touched" class="text-4xl text-green-500 font-thin">
+        Register Form</h2>
 
 
     <!-- email -->
     <form (ngSubmit)="submitForm()" [formGroup]="registerForm" class=" mx-auto my-10">
         <div class="relative z-0 w-full mb-5 group">
-            <input title="email" [class.!border-b-red-700]="emailController?.touched && emailController?.errors" formControlName="email" type="email" [name]="'floating_'+'email'" [id]="'floating_'+'email'"
+            <input title="email" [class.!border-b-red-700]="emailController?.touched && emailController?.errors"
+                formControlName="email" type="email" [name]="'floating_'+'email'" [id]="'floating_'+'email'"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                 placeholder=" " required />
-            <label [class.!text-red-700]="emailController?.touched && emailController?.errors" aria-label="email" [for]="'floating_'+'email'"
+            <label [class.!text-red-700]="emailController?.touched && emailController?.errors" aria-label="email"
+                [for]="'floating_'+'email'"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                 <span class="capitalize">Email :</span></label>
         </div>
@@ -52,10 +55,13 @@
         }
         <!-- password -->
         <div class="relative z-0 w-full mb-5 group">
-            <input title="password" [class.!border-b-red-700]="passwordController?.touched && passwordController?.errors" type="password" formControlName="password" [name]="'floating_'+'password'" [id]="'floating_'+'password'"
+            <input title="password"
+                [class.!border-b-red-700]="passwordController?.touched && passwordController?.errors" type="password"
+                formControlName="password" [name]="'floating_'+'password'" [id]="'floating_'+'password'"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                 placeholder=" " required />
-            <label [class.!text-red-700]="passwordController?.touched && passwordController?.errors" aria-label="password" [for]="'floating_'+'password'"
+            <label [class.!text-red-700]="passwordController?.touched && passwordController?.errors"
+                aria-label="password" [for]="'floating_'+'password'"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                 <span class="capitalize">Password :</span></label>
         </div>
@@ -72,10 +78,15 @@
         }
         <!-- repassword -->
         <div class="relative z-0 w-full mb-5 group">
-            <input  [class.!border-b-red-700]="rePasswordController?.touched && (rePasswordController?.errors||registerForm.getError('noMatch'))" title="repassword" type="password" formControlName="rePassword" [name]="'floating_'+'repassword'" [id]="'floating_'+'repassword'"
+            <input
+                [class.!border-b-red-700]="rePasswordController?.touched && (rePasswordController?.errors||registerForm.getError('noMatch'))"
+                title="repassword" type="password" formControlName="rePassword" [name]="'floating_'+'repassword'"
+                [id]="'floating_'+'repassword'"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                 placeholder=" " required />
-            <label [class.!text-red-700]="rePasswordController?.touched && (rePasswordController?.errors||registerForm.getError('noMatch'))" aria-label="repassword" [for]="'floating_'+'repassword'"
+            <label
+                [class.!text-red-700]="rePasswordController?.touched && (rePasswordController?.errors||registerForm.getError('noMatch'))"
+                aria-label="repassword" [for]="'floating_'+'repassword'"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                 <span class="capitalize">Repassword</span></label>
         </div>
@@ -92,10 +103,12 @@
         }
         <!-- phone -->
         <div class="relative z-0 w-full mb-5 group">
-            <input  [class.!border-b-red-700]="phoneController?.touched && phoneController?.errors" title="phone" type="tel" formControlName="phone" [name]="'floating_'+'phone'" [id]="'floating_'+'phone'"
+            <input [class.!border-b-red-700]="phoneController?.touched && phoneController?.errors" title="phone"
+                type="tel" formControlName="phone" [name]="'floating_'+'phone'" [id]="'floating_'+'phone'"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                 placeholder=" " required />
-            <label [class.!text-red-700]="phoneController?.touched && phoneController?.errors" aria-label="phone" [for]="'floating_'+'phone'"
+            <label [class.!text-red-700]="phoneController?.touched && phoneController?.errors" aria-label="phone"
+                [for]="'floating_'+'phone'"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                 <span class="capitalize">Phone</span></label>
         </div>
@@ -111,13 +124,13 @@
         </div>
         }
 
-        <button  type="submit"
-        [disabled]="IsLoading"
-            class="font-thin text-lg text-white bg-green-700 disabled:opacity-35 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">@if (IsLoading) {
-                Loading....
+        <button type="submit" [disabled]="IsLoading"
+            class="font-thin text-lg text-white bg-green-700 disabled:opacity-35 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">@if
+            (IsLoading) {
+            Loading....
             }@else {
             Register Form
-        }</button>
+            }</button>
     </form>
 
 </div>
